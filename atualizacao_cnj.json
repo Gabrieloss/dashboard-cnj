@@ -1,0 +1,20 @@
+{
+  "url_painel": "https://justica-em-numeros.cnj.jus.br/painel-estatisticas/",
+  "url_tabela_fato": "",
+  "pagina_downloads": "",
+  "nome_link": "tbl_fato_R.zip",
+  "diretorio_dados": "planilhas",
+  "intervalo_horas": 24,
+  "timeout_segundos": 60,
+  "tentativas": 3,
+  "url_objeto": "https://stg.s3.cnj.jus.br/dpj/painelestatistico/BI/tabelas_fatos/produ%C3%A7%C3%A3o/tbl_fato_R.zip",
+  "arquivo_link_temporario": ".cnj_link_temporario.json",
+  "renovar_pelo_painel": true,
+  "navegador_headless": false,
+  "timeout_painel_segundos": 90,
+  "passos_painel": [
+    "Downloads",
+    "Tabela de alimentação do painel",
+    "Download"
+  ]
+}

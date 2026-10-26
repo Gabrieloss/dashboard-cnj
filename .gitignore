@@ -1,0 +1,28 @@
+# Ambiente Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Dados locais, versões anteriores e resultados gerados
+planilhas/*
+!planilhas/README.md
+graficos_saida/
+logs/
+
+# Configurações locais e links de download temporários
+.env
+.env.*
+!.env.example
+.cnj_link_temporario.json
+.cnj_link_temporario.json.tmp
+.aws/
+.codex/
+.agents/
+.claude/
+AGENTS.md
+CLAUDE.md
+
+# Metadados do Windows
+*:Zone.Identifier

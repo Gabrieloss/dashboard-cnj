@@ -1,0 +1,136 @@
+/* Estilo dos controles do Dash. Sem isto os componentes ficam com a aparência
+   padrão (azul-roxo do rc-slider, dropdown cinza-claro) que destoa da página. */
+
+:root {
+  --azul: #1c5cab;
+  --azul-claro: #f4f7fc;
+  --superficie: #ffffff;
+  --fundo: #ffffff;
+  --borda: #dedcd4;
+  --texto: #111110;
+  --texto-sec: #54534f;
+  --texto-mudo: #8b8a84;
+}
+
+/* ---------- Dropdown ---------- */
+.Select-control,
+.dash-dropdown .Select-control {
+  border: 1px solid var(--borda) !important;
+  border-radius: 4px !important;
+  background: var(--superficie) !important;
+  min-height: 38px !important;
+  box-shadow: none !important;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+.is-focused:not(.is-open) > .Select-control {
+  border-color: var(--azul) !important;
+  box-shadow: 0 0 0 3px rgba(28, 92, 171, 0.14) !important;
+}
+.Select-placeholder,
+.Select--single > .Select-control .Select-value {
+  line-height: 36px !important;
+  color: var(--texto) !important;
+}
+.Select-placeholder { color: var(--texto-mudo) !important; }
+.Select-menu-outer {
+  border: 1px solid var(--borda) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(11, 11, 11, 0.10) !important;
+  overflow: hidden;
+  margin-top: 4px !important;
+}
+.VirtualizedSelectOption { padding: 9px 12px !important; }
+.VirtualizedSelectFocusedOption { background: var(--azul-claro) !important; }
+
+/* pílulas do multi-select (comparadores) */
+.Select--multi .Select-value {
+  background: var(--azul-claro) !important;
+  border: 1px solid rgba(28, 92, 171, 0.30) !important;
+  color: var(--azul) !important;
+  border-radius: 6px !important;
+  font-size: 12px;
+}
+.Select--multi .Select-value-icon {
+  border-right: 1px solid rgba(28, 92, 171, 0.30) !important;
+}
+.Select--multi .Select-value-icon:hover {
+  background: rgba(28, 92, 171, 0.16) !important;
+  color: var(--azul) !important;
+}
+
+/* ---------- RangeSlider ----------
+   O Dash 4 usa classes .dash-slider-* (não mais .rc-slider-*). O padrão vem
+   roxo; aqui alinhamos ao azul da nossa auditoria. */
+.dash-slider-track {
+  background: #e1e0d9 !important;
+  height: 4px !important;
+  border-radius: 999px !important;
+}
+.dash-slider-range {
+  background: var(--azul) !important;
+  height: 4px !important;
+  border-radius: 999px !important;
+}
+.dash-slider-thumb {
+  background: #fff !important;
+  border: 2px solid var(--azul) !important;
+  width: 16px !important;
+  height: 16px !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transition: box-shadow 140ms ease;
+}
+.dash-slider-thumb:hover,
+.dash-slider-thumb:focus,
+.dash-slider-thumb:active {
+  box-shadow: 0 0 0 5px rgba(28, 92, 171, 0.16) !important;
+  outline: none !important;
+}
+.dash-slider-mark {
+  color: var(--texto-mudo) !important;
+  font-size: 11px !important;
+}
+.dash-slider-tooltip {
+  background: var(--texto) !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  padding: 5px 9px !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Atalhos de período ---------- */
+.preset-btn {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--texto-sec);
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  padding: 5px 13px;
+  cursor: pointer;
+  transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+}
+.preset-btn:hover {
+  background: var(--azul-claro);
+  border-color: rgba(28, 92, 171, 0.35);
+  color: var(--azul);
+}
+
+/* ---------- RadioItems ---------- */
+input[type="radio"] { accent-color: var(--azul); }
+
+/* ---------- Células de tempo (clicáveis) ---------- */
+.celula-tempo:hover { background: #f7f9fd !important; }
+.celula-tempo.selecionada:hover { background: #f4f7fc !important; }
+
+/* ---------- Escala de TV nos controles ----------
+   A 4 m, o padrão de 14px do Dash fica ilegível. */
+.Select-control, .Select-placeholder, .Select-value-label,
+.VirtualizedSelectOption { font-size: 17px !important; }
+.Select-control { min-height: 46px !important; }
+.Select-placeholder, .Select--single > .Select-control .Select-value { line-height: 44px !important; }
+.dash-slider-mark { font-size: 15px !important; }
+.preset-btn { font-size: 15px; padding: 7px 16px; }
+label, .rot { letter-spacing: 0.09em; }

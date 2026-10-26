@@ -1,0 +1,5 @@
+# Painéis e processamento. Versões ainda não fixadas em ambiente reproduzível.
+dash
+plotly
+pandas
+polars
